@@ -266,7 +266,7 @@ echo 70
 
 # SETUP FEEDER TO SEND DUMP1090 DATA TO ADS-B EXCHANGE
 
-READSB_REPO="https://github.com/adsbxchange/readsb.git"
+READSB_REPO="https://github.com/adsbexchange/readsb.git"
 READSB_BRANCH="master"
 if grep -E 'wheezy|jessie' /etc/os-release -qs; then
     READSB_BRANCH="jessie"
@@ -403,7 +403,7 @@ ENDTEXT2="
 No data available from IP $INPUT_IP on port $INPUT_PORT!
 ---------------------
 If your data source is another device / receiver, see the advice here:
-https://github.com/adsbxchange/wiki/wiki/Datasource-other-device
+https://github.com/adsbexchange/wiki/wiki/Datasource-other-device
 "
 if [ -f /etc/fr24feed.ini ] || [ -f /etc/rb24.ini ]; then
     ENDTEXT2+="
