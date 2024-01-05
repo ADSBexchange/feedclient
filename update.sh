@@ -385,11 +385,11 @@ Thanks for choosing to share your data with ADS-B Exchange!
 If you're curious, check your feed status after 5 min:
 
 https://adsbexchange.com/myip/
-http://adsbx.org/sync
+https://map.adsbexchange.com/sync/
 
 Question? Issues? Go here:
-https://www.adsbexchange.com/forum/threads/adsbexchange-setup-scripts.631609/
-https://discord.gg/n9dGbkTtZm
+https://discord.gg/xKqyMzTXvg
+https://adsbx.discourse.group/
 
 Webinterface to show the data transmitted? Run this command:
 sudo bash /usr/local/share/adsbexchange/git/install-or-update-interface.sh
