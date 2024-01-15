@@ -158,8 +158,8 @@ cp "$GIT"/scripts/*.sh "$IPATH"
 UNAME=adsbexchange
 if ! id -u "${UNAME}" &>/dev/null
 then
-    # 2nd syntax is for fedora / centos
-    adduser --system --home "$IPATH" --no-create-home --quiet "$UNAME" || adduser --system --home-dir "$IPATH" --no-create-home "$UNAME"
+    # 2nd syntax is for fedora / centos / arch / everyone else
+    adduser --system --home "$IPATH" --no-create-home --quiet "$UNAME" || useradd --system --home-dir "$IPATH" --no-create-home "$UNAME"
 fi
 
 echo 4
