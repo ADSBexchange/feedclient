@@ -159,7 +159,12 @@ UNAME=adsbexchange
 if ! id -u "${UNAME}" &>/dev/null
 then
     # 2nd syntax is for fedora / centos
-    adduser --system --home "$IPATH" --no-create-home --quiet "$UNAME" || adduser --system --home-dir "$IPATH" --no-create-home "$UNAME"
+    if command -v adduser &> /dev/null
+    then
+        adduser --system --home "$IPATH" --no-create-home --quiet "$UNAME" || adduser --system --home-dir "$IPATH" --no-create-home "$UNAME"
+    else
+        useradd --system --home "$IPATH" --no-create-home "$UNAME"
+    fi
 fi
 
 echo 4
