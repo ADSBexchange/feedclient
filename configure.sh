@@ -106,7 +106,14 @@ RECEIVERALTITUDE="$ALT"
 INPUT="127.0.0.1:30005"
 INPUT_TYPE="dump1090"
 
-if [[ $(hostname) == "radarcape" ]] || pgrep rcd &>/dev/null; then
+if command -v hostname; then
+        hostname=$(hostname)
+else
+        hostname=$(hostnamectl hostname)
+fi
+
+
+if [[ $hostname == "radarcape" ]] || pgrep rcd &>/dev/null; then
     INPUT="127.0.0.1:10003"
     INPUT_TYPE="radarcape_gps"
 fi
