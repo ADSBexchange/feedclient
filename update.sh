@@ -75,6 +75,8 @@ elif command -v yum &>/dev/null; then
     yum install -y git curl socat python3-virtualenv python3-devel gcc make ncurses-devel nc uuid zlib-devel zlib libzstd-devel libzstd
 elif command -v dnf &>/dev/null; then
     dnf install -y git curl socat python3-virtualenv python3-devel gcc make ncurses-devel nc uuid zlib-devel zlib libzstd-devel libzstd
+elif command -v pacman &>/dev/null; then
+    pacman -Sy --needed git curl socat python-virtualenv python gcc make ncurses  zlib zstd
 fi
 
 hash -r
